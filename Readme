@@ -1,0 +1,82 @@
+# 🛍️ Customer Segmentation with RFM and KMeans Clustering
+
+This project performs customer segmentation using RFM (Recency, Frequency, Monetary) analysis and KMeans clustering on the **Online Retail II Dataset**. The purpose is to identify customer groups based on purchasing behavior for better business decision-making.
+
+---
+
+## 📁 Dataset
+
+**Source:** [Kaggle - Online Retail II UCI](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci)  
+**Format:** CSV  
+**Raw File (Used in this Notebook):** [Google Drive Link](https://drive.google.com/file/d/1a23FkkFUuRLeFDXmYoYpjo5_5FAAYDom/view)
+
+---
+
+## 🧰 Tools & Libraries
+
+- Python (Google Colab)
+- `pandas`, `numpy`
+- `matplotlib`, `seaborn`
+- `sklearn` (KMeans, StandardScaler, silhouette_score)
+- `yellowbrick` (ElbowVisualizer)
+
+---
+
+## 📊 Step-by-Step Workflow
+
+### 1. Data Cleaning
+- Remove missing values
+- Remove negative or canceled transactions
+- Filter out non-relevant regions (`United Kingdom` only for this project)
+
+### 2. RFM Calculation
+- **Recency**: Days since last purchase
+- **Frequency**: Total number of unique invoices
+- **Monetary**: Total spending (Quantity × Price)
+
+### 3. Normalization
+- Scaled RFM values using `StandardScaler`
+
+### 4. Optimal Cluster Selection
+- Compared **Silhouette Score**, **Elbow Method**, and **Yellowbrick**
+- Final choice: **4 clusters**
+
+### 5. Clustering
+- Applied **KMeans Clustering**
+- Assigned cluster labels to each customer
+
+### 6. Cluster Analysis
+Performed detailed analysis on each cluster, with focus on:
+- Average RFM values per cluster
+- Identified high-value customer segment (`Cluster 1`)
+
+---
+
+## 🔍 Key Insights
+
+- Cluster 1 contains **loyal, high-spending customers**
+- Cluster 2 includes **inactive or churned customers**
+- Cluster 0 and 3 contain **moderate** or **low-value** customers
+- RFM + KMeans is a simple yet powerful method for customer segmentation
+
+---
+
+## 📌 What I Learned
+
+- How to implement RFM analysis from scratch
+- How to apply and interpret clustering methods
+- How to validate cluster quality using multiple metrics
+- How to clean and prepare retail datasets for modeling
+
+---
+
+## 📓 Colab Notebook
+
+🔗 [Open the Full Notebook on Google Colab](https://colab.research.google.com/drive/15uTKI0h8_JjwwdqQuS9hTLII00ldAwl0)
+
+---
+
+## 📬 Contact
+
+Feel free to reach out if you have feedback or questions!
+
